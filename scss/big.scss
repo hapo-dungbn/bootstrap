@@ -1,0 +1,885 @@
+@import "variables";
+
+.main-site {
+  width: 100%;
+}
+
+.information {
+
+  .info-avatar {
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+    @include background();
+
+    .info-name {
+      width: 100%;
+      left: 0;
+      bottom: 90px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .avatar-update {
+      background-color: rgba(58, 57, 57, 0.8);
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      bottom: -60px;
+      right: -60px;
+      margin: 0;
+    }
+  }
+
+  .info-profile {
+    background: #242581;
+    min-height: 600px;
+
+    .languages {
+      margin-top: 21px;
+      list-style-type: none;
+      justify-content: center;
+      padding: 0;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.info-profile {
+
+  .languages {
+
+    li:first-child {
+      padding-left: 0;
+      text-decoration-line: underline;
+      @include name-bold(700, $content-size, normal, none);
+    }
+
+    li:last-child {
+      padding-right: 0;
+      @include name-bold(300, $content-size, normal, none);
+    }
+
+    li {
+      padding: 0 17px;
+    }
+  }
+
+  .circle-avatar {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 4px solid $icon-color;
+    overflow: hidden;
+    margin: 16px auto 15px;
+    @include background();
+
+    .camera-update-right {
+      width: 100%;
+      height: 33px;
+      bottom: -5px;
+      background: rgba(58, 57, 57, 0.8);
+      margin: 0;
+    }
+  }
+
+  .personal-info {
+    padding: 0 114px;
+
+    .head {
+      padding-bottom: 11px;
+      margin-bottom: 17px;
+      border-bottom: 2px solid #EF5B5B;
+    }
+  }
+
+  .edit-profile-button {
+    margin-top: 7px;
+
+    @include button($orange);
+  }
+}
+
+.detail {
+
+  .detail-row {
+    margin-bottom: 15px;
+
+    .column-one {
+      width: 74px;
+      margin: 0;
+      @include name-bold(600, $content-size, normal, none)
+    }
+
+    .column-two {
+      width: calc(100% - 74px);
+      padding-left: 24px;
+      @include name-bold(300, $content-size, normal, none)
+    }
+  }
+}
+
+
+
+.personal-info {
+
+  .head {
+
+    h4 {
+      margin: 0;
+      @include name-bold(600, $content-size, normal, uppercase);
+    }
+
+    h5 {
+      margin: 0;
+      @include  name-bold(300, $content-size, normal, none)
+    }
+  }
+}
+
+.circle-avatar {
+
+  .camera-update-right {
+
+    i {
+      font-size: $content-size;
+      color: $icon-color;
+    }
+  }
+}
+
+
+.information {
+
+  .avatar-update {
+
+    i {
+      top: 28px;
+      left: 30px;
+      color: $icon-color;
+      font-size: $content-size;
+    }
+  }
+}
+
+.info-box {
+
+  h5 {
+    margin: 0;
+    @include name-bold(400, 20px, normal, none);
+  }
+
+  .name-under-line {
+    margin: 0;
+    @include name-bold(700, 40px, $letter-spacing, uppercase);
+  }
+
+  .name-under-line::after {
+    width: 236px;
+    @include name-under-line-after($orange);
+  }
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.professional-summary {
+  background: #2026B2;
+  padding: $padding;
+
+  .container {
+
+    .title {
+      margin-bottom: 32px;
+    }
+
+    .text {
+      @include name-bold(300, $content-size, normal, none)
+    }
+
+    .edit-summary-button {
+      margin-top: 15px;
+      padding: 0 30px;
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.title {
+
+  .name-under-line {
+    @extend %name-under-line;
+  }
+}
+
+.professional-summary {
+
+  .title {
+
+    .name-under-line::before {
+      width: 70px;
+      @include name-under-line-before($orange);
+    }
+
+    .name-under-line::after {
+      width: 200px;
+      @include name-under-line-after($orange);
+    }
+  }
+}
+
+.edit-summary-button {
+
+  .edit-summary {
+    @include button($orange);
+  }
+}
+
+.skill {
+  background: #4A0F73;
+  padding: $padding;
+
+  .title {
+    padding-bottom: 25px;
+
+    .name-under-line {
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .name-under-line::before {
+      width: 41px;
+      @include name-under-line-before($orange);
+    }
+
+    .sub {
+      @include name-bold(300, $content-size, normal, none);
+    }
+  }
+}
+
+.skill {
+
+  .professional-skill {
+
+    .name-under-line::after {
+      width: 197px;
+      @include name-under-line-after($orange);
+    }
+  }
+
+  .personal-skill {
+
+    .name-under-line::after {
+      width: 139px;
+      @include name-under-line-after($orange);
+    }
+  }
+
+  .skill-progress-line {
+    padding: 0 30px;
+
+    .line-process-container {
+      margin-bottom: 20px;
+    }
+
+    .personal-button-add {
+      padding-top: 8px;
+      @include button($orange);
+    }
+  }
+}
+
+.personal-button-add {
+
+  .add-skill {
+    justify-content: flex-end;
+  }
+}
+
+.skill-progress-circle {
+
+  .circle-progress {
+    width: 33.33%;
+    margin-bottom: 25px;
+  }
+
+  .professional-button-add {
+    width: 33.33%;
+    margin-bottom: 25px;
+
+    .add-skill {
+      margin-bottom: 26px;
+      @include button($orange);
+
+    }
+  }
+}
+
+.circle-progress {
+
+  .progress-circle-head {
+
+    .progress-circle-75 {
+      @extend %circle-size;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .progress-circle-65 {
+      @extend %circle-size;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .progress-circle-50 {
+      @extend %circle-size;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  .progress-circle-name {
+    margin-top: 10px;
+
+    h5 {
+      margin-bottom: 0;
+      @include name-bold(400, $content-size, normal, uppercase)
+    }
+  }
+}
+
+.progress-circle-head {
+
+  svg {
+    @extend  %circle-size;
+  }
+
+  .white {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 5px;
+    stroke-dasharray: 295.16;
+    z-index: 1;
+  }
+
+  .red {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    fill: none;
+    stroke: #f64d70;
+    stroke-width: 5px;
+    left: 0;
+  }
+
+  span {
+    left: 38%;
+    top: 42%;
+    z-index: 50;
+    @include name-bold(400, 14px, normal, none);
+  }
+
+  span::after {
+    content: "%";
+  }
+}
+
+.progress-circle-75 {
+
+  .red {
+    stroke-dasharray: 221.16;
+  }
+}
+
+.progress-circle-65 {
+
+  .red {
+    stroke-dasharray: 191.854;
+  }
+}
+
+.progress-circle-50 {
+
+  .red {
+    stroke-dasharray: 147.58;
+  }
+}
+
+.line-process-container {
+
+  .line-progress-head {
+    padding-bottom: 10px;
+
+    span {
+      @include name-bold(500, $content-size, normal, uppercase);
+    }
+  }
+
+  .line-progress {
+
+    .line-white {
+      background-color: #FFFFFF;
+      border-radius: 3px;
+      height: 7px;
+      width: 100%;
+    }
+
+    .line-red {
+      background-color: #f64d70;
+      border-radius: 3px;
+      height: 7px;
+      top: 0;
+    }
+  }
+
+  .team-work {
+
+    .line-red {
+      width: 75%;
+    }
+  }
+
+  .skill-english {
+
+    .line-red {
+      width: 50%;
+    }
+  }
+
+  .skill-japanese {
+    .line-red {
+      width: 80%;
+    }
+  }
+}
+
+.line-progress {
+
+  .line-red{
+
+    span {
+      position: absolute;
+      bottom: 17px;
+      right: -15px;
+      font-weight: 500;
+      font-size: $content-size;
+      @include font();
+    }
+
+    span::after {
+      content: '%';
+    }
+  }
+}
+
+.experience {
+  background-color: #F64C71;
+  padding: $padding;
+
+  .work-exp {
+
+    .name-under-line::after {
+      width: 82px;
+      @include name-under-line-after($white);
+    }
+  }
+
+  .education {
+
+    .name-under-line::after {
+      width: 75px;
+      @include name-under-line-after($white);
+    }
+  }
+}
+
+.experience {
+
+  .work-exp,
+  .education {
+
+    .title {
+
+      padding-bottom: 25px;
+
+      .name-under-line::before {
+        width: 41px;
+        @include  name-under-line-before($white);
+      }
+
+      .name-under-line {
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+
+      .sub {
+        @include name-bold(300, $content-size, normal, none);
+      }
+    }
+
+    .box {
+      padding: 0 30px;
+    }
+  }
+}
+
+.work-exp,
+.education {
+
+  .box {
+
+    .ex-table {
+      border-left: 1px solid #FFFFFF;
+      padding-left: 50px;
+      padding-bottom: 15px;
+    }
+
+    .ex-table::before {
+      content: "";
+      width: 15px;
+      height: 1px;
+      background: $white;
+      position: absolute;
+      left: -7.5px;
+    }
+  }
+
+  .exp-button-add {
+    padding: 0 30px;
+    justify-content: flex-end;
+
+    .add-skill {
+      margin-top: 9px;
+      @include button($white);
+    }
+  }
+}
+
+.ex-table {
+
+  .table-item {
+    padding: 10px;
+    border: 1px solid $white;
+    margin-bottom: 20px;
+
+    .item-name {
+      @include name-bold(700, $content-size, $letter-spacing, uppercase);
+    }
+
+    .item-desc,
+    .item-content {
+      @include  name-bold(300, $content-size, normal, none);
+    }
+
+    .item-name::after {
+      position: absolute;
+      content: "";
+      width: 88px;
+      height: 1px;
+      background: $white;
+      left: 3px;
+      bottom: 0;
+    }
+  }
+
+  .table-item::before {
+    position: absolute;
+    color: $white;
+    content: "";
+    width: 50px;
+    height: 1px;
+    border-top: 1px dashed $white;
+    left: -50px;
+    top: calc(50% - 0.5px);
+  }
+
+  .table-item::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid $white;
+    top: calc(50% - 6px);
+    left: -51px;
+  }
+}
+
+.portfolio {
+  padding: $padding;
+  background: #563D67;
+
+  .title {
+    padding-bottom: 20px;
+
+    .name-under-line::before {
+      width: 41px;
+      @include  name-under-line-before($orange);
+    }
+
+    .name-under-line::after {
+      width: 72px;
+      @include name-under-line-after($orange);
+    }
+
+    .name-under-line {
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .portfolio-list {
+      list-style-type: none;
+      padding: 0 30px;
+      margin: 0;
+    }
+  }
+
+  .project-container {
+
+    div {
+      li: 25%;
+
+    }
+  }
+}
+
+.title {
+
+  .portfolio-list {
+
+    li {
+      padding-right: 28px;
+      @include name-bold(600, 14px, $letter-spacing, uppercase);
+    }
+
+    li:first-child {
+      text-decoration: underline;
+    }
+  }
+}
+
+.grid {
+  max-width: 1170px;
+
+  .grid-item {
+    width: 25%;
+    height: 200px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 160px;
+    }
+
+    .add-skill {
+      @include button($orange);
+    }
+
+  }
+
+  .grid-item--height2 {
+    height: 400px;
+
+    img {
+      width: 220px;
+    }
+
+
+  }
+
+  .a1,
+  .a0 {background: #FD7038;}
+  .a2 {background: #EECD10;}
+  .a3 {background: #2F2FA1;}
+  .a4,
+  .a8 {background: #F64C71;}
+  .a5,
+  .a9 {background: #333333;}
+  .a6 {background: #EF5B5B;}
+  .a7 {background: #F9BC2D}
+}
+
+.references {
+  background: #2F2FA1;
+  padding: $padding;
+
+  .title {
+    padding-bottom: 25px;
+
+    .name-under-line::before {
+      width: 41px;
+      @include  name-under-line-before($orange)
+    }
+
+    .name-under-line::after {
+      width: 72px;
+      @include  name-under-line-after($orange)
+    }
+  }
+
+  .carousel {
+
+    padding: 0 80px;
+
+    a {
+      width: 7px;
+      height: 14px;
+    }
+
+    .carousel-inner {
+      padding: 0 25px;
+
+      .avatar-container {
+
+        margin-right: 70px;
+
+      }
+
+      .re-content {
+        width: calc(100% - 220px);
+      }
+    }
+  }
+
+  .add-skill {
+    @include button($orange)
+  }
+}
+
+.references {
+
+  ol {
+    bottom: -56px;
+    li {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+  }
+
+  .carousel-control-prev {
+    left: 80px;
+    top: 60px;
+  }
+
+  .avatar-container {
+
+    img {
+      height: 150px;
+      width: 150px;
+      border: 4px solid $white;
+      border-radius: 50%;
+    }
+  }
+
+  .carousel-control-next {
+    right: 80px;
+    top: 60px;
+  }
+
+  .re-content {
+
+    p {
+      position: relative;
+      @include name-bold(300, $content-size, none, normal);
+    }
+
+    p::before {
+      position: absolute;
+      content: "“";
+      font-family: 'Port Lligat Sans', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 80px;
+      line-height: normal;
+      text-align: justify;
+      color: #FFFFFF;
+      left: -35.38px;
+      top: -28px;
+    }
+
+    p::after {
+      position: absolute;
+      content: "”";
+      font-family: 'Port Lligat Sans', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 80px;
+      line-height: normal;
+      text-align: justify;
+      color: #FFFFFF;
+      bottom: -55px;
+    }
+
+  }
+
+  .carousel-indicators {
+    position: static;
+    margin: 26px 0 20px 0;
+  }
+
+  .carousel-inner {
+
+    .items {
+      display: flex;
+    }
+  }
+}
+
+.footer {
+  background: #0C0C5E;
+
+  div {
+
+    span {
+      @include name-bold(300, $content-size, normal, none);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,96 @@
+$orange: #EF5B5B;
+$white: #FFFFFF;
+$icon-color: rgba(255, 255, 255, 0.75);
+$letter-spacing: 0.05em;
+$content-size: 14px;
+$title-size: 25px;
+$padding: 45px 0;
+$padding-small: 35px 0;
+
+
+@mixin font {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+@mixin background {
+  background-image: url("../image/background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+@mixin name-bold($number1, $number2, $number3, $case) {
+  position: relative;
+  font-weight: $number1;
+  font-size: $number2;
+  letter-spacing: $number3;
+  text-transform: $case;
+  @include font();
+}
+
+
+
+@mixin name-under-line-after($color) {
+  position: absolute;
+  content: "";
+  height: 2px;
+  background-color: $color;
+  left: 0;
+  bottom: 0;
+}
+
+@mixin name-under-line-before($color) {
+  position: absolute;
+  content: "";
+  height: 2px;
+  background-color: $color;
+  right: 0px;
+  top: 0px;
+}
+
+@mixin button($border-color){
+  .btn-edit {
+    border: 1px solid $border-color;
+    border-radius: 0;
+    @include name-bold(400, $content-size, normal, none)
+  }
+
+  .btn-edit:hover {
+    background-color: $border-color;
+  }
+
+  .btn-edit i {
+    font-size: $content-size;
+    color: $white;
+    margin-left: 5px;
+  }
+}
+
+%name-under-line {
+  position: relative;
+  padding: 2px 0;
+  @include name-bold(700, $title-size, $letter-spacing, uppercase)
+}
+
+@mixin name-under-line-small {
+  position: relative;
+  padding: 2px 0;
+  position: relative;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: $letter-spacing;
+  text-transform: uppercase;
+  @include font();
+
+}
+
+%circle-size {
+  width: 100px;
+  height: 100px;
+}
+
+
+

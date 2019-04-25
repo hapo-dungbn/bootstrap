@@ -1,0 +1,91 @@
+@media only screen and (max-width: 375px) {
+    .personal-info {
+        padding: 0 14px;
+    }
+
+    .title .name-under-line {
+        font-size: 16px;
+    }
+
+    .row-summary .title .name-under-line::after {
+        width: 127px;
+    }
+
+    .row-summary .title .name-under-line::before {
+        width: 50px;
+    }
+
+    .edit-summary {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .professional-summary {
+        background: #2026B2;
+        padding: 37px 0 35px 0;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .text {
+        margin-top: 0px;
+    }
+
+
+    .row .title .name-under-line::before {
+        width: 40px;
+    }
+
+    .professional-skill .title .name-under-line::after {
+        width: 127px;
+    }
+
+    .personal-skill .title .name-under-line::after {
+        width: 89px;
+    }
+
+    .skill .sub {
+        margin-top: 11px;
+    }
+
+    .skill-progress-circle .circle-progress {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .professional-button-add {
+        width: 100%;
+        margin-top: -5px;
+    }
+
+    .add-skill {
+        margin: 0;
+        padding: 0;
+    }
+
+    .professional-button-add {
+        margin-bottom: 35px;
+    }
+
+    .skill .title {
+        padding-bottom: 10px;
+    }
+
+    .skill-progress-line {
+        padding: 0;
+    }
+
+    .personal-button-add .add-skill {
+        justify-content: center;
+    }
+
+    .line-process-container {
+        margin-bottom: 15px;
+    }
+
+    .skill {
+        padding: 35px 0;
+    }
+}
